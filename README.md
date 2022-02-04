@@ -124,19 +124,31 @@ You can populate variables using command line or via a file. Terraform automatic
 ### Terraform Commands
 
 Intialize the directory:  
-`terraform init`
+```bash
+terraform init
+```
 
 Format your configuration files:  
-`terraform fmt` 
+```bash
+terraform fmt
+``` 
 
 Validate your configuration files:  
-`terraform validate`
+```bash
+terraform validate
+```
 
 Create and display apply plan:  
-`terraform plan`
+```bash
+terraform plan
+```
 
 Inspect the current state:  
-`terraform show`
+```bash
+terraform show
+```
 
 Terminate resources:  
-`terraform destroy`
+```bash
+terraform destroy
+```
