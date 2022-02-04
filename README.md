@@ -16,7 +16,7 @@ Terraform maintains the set of instructions in Terraform configuration files. Th
 
 Let's consider the following file for our example - 
 
-```json
+```python
 terraform {
   required_providers {
     google = {
@@ -46,7 +46,7 @@ Terraform divides information into blocks, defined in curly braces `{}`. There a
 
 The `terraform {}` block contains Terraform settings, including the required providers Terraform will use to provision your infrastructure.
 
-```json
+```python
 terraform {
   required_providers {
     google = {
@@ -65,7 +65,7 @@ You can also define a version constraint for each provider in the required_provi
 
 The `provider` block configures the specified provider, in this case `google`. A provider is a plugin that Terraform uses to create and manage your resources. You can define multiple provider blocks in a Terraform configuration to manage resources from different providers.
 
-```json
+```python
 provider "google" {
   credentials = file("<NAME>.json")
 
@@ -86,7 +86,7 @@ Resource blocks have two strings before the block -
 -   Resource type
 -   Resource name
 
-```json
+```python
 resource "google_compute_network" "vpc_network" {
   name = "terraform-network"
 }
@@ -106,7 +106,7 @@ Terraform stores the IDs and properties of the resources it manages in the `terr
 
 To make your configuration more dynamic and flexible you can include variables. If a `default` value is set, then the variable becomes optional. Else it is a required variable. 
 
-```json
+```python
 variable "project" { }
 
 variable "region" {
