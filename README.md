@@ -143,6 +143,11 @@ Create and display apply plan:
 terraform plan
 ```
 
+Apply the changes:
+```bash
+terraform apply
+```
+
 Inspect the current state:  
 ```bash
 terraform show
