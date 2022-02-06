@@ -99,8 +99,8 @@ The prefix of the type maps to the name of the provider. In this example, terraf
 The resource name is used to refer to the resource from elsewhere in the same Terraform module, but has no significance outside that module's scope.
 
 #### Inspect State
-Terraform stores the IDs and properties of the resources it manages in the `terraform.tfstate` file, so that it can update or destroy those resources going forward.
-
+Terraform stores the IDs and properties of the resources it manages in the `terraform.tfstate` file, so that it can update or destroy those resources going forward.  
+The Terraform state file is the only way Terraform can track which resources it manages, and often contains sensitive information.
 
 #### Input Variables
 
@@ -123,7 +123,7 @@ You can populate variables using command line or via a file. Terraform automatic
 
 ### Terraform Commands
 
-Intialize the directory:  
+Intialize the directory and download the necessary plugins and provider details:  
 ```bash
 terraform init
 ```
@@ -133,7 +133,7 @@ Format your configuration files:
 terraform fmt
 ``` 
 
-Validate your configuration files:  
+Validate your configuration files for syntax and internal consistency:  
 ```bash
 terraform validate
 ```
@@ -143,7 +143,7 @@ Create and display apply plan:
 terraform plan
 ```
 
-Apply the changes:
+Apply the changes to your infrastructure:
 ```bash
 terraform apply
 ```
